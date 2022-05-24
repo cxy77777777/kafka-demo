@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: 101.201.70.231:9092  #连接kafka集群
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer  #生产者序列化key
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer  #生产者序列化value
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer  #消费者反序列化key
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer  #消费者反序列化value
+      group-id: test  #消费者组id
